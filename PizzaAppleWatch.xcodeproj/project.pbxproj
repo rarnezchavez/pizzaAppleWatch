@@ -19,6 +19,11 @@
 		4E63170C1DA1CF0C00E57B33 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63170B1DA1CF0C00E57B33 /* InterfaceController.swift */; };
 		4E63170E1DA1CF0C00E57B33 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63170D1DA1CF0C00E57B33 /* ExtensionDelegate.swift */; };
 		4E6317101DA1CF0C00E57B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E63170F1DA1CF0C00E57B33 /* Assets.xcassets */; };
+		4E6317201DA1DB1900E57B33 /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63171F1DA1DB1900E57B33 /* Datos.swift */; };
+		4E6317221DA1DF6000E57B33 /* controladorTipoMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6317211DA1DF6000E57B33 /* controladorTipoMasa.swift */; };
+		4E6317241DA1E8B600E57B33 /* controladorTipoQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6317231DA1E8B600E57B33 /* controladorTipoQueso.swift */; };
+		4E6317261DA1ED4A00E57B33 /* controladorIngredientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6317251DA1ED4A00E57B33 /* controladorIngredientes.swift */; };
+		4E6317281DA1EF7500E57B33 /* controladorConfirmacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6317271DA1EF7500E57B33 /* controladorConfirmacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,11 @@
 		4E63170D1DA1CF0C00E57B33 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4E63170F1DA1CF0C00E57B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E6317111DA1CF0C00E57B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E63171F1DA1DB1900E57B33 /* Datos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
+		4E6317211DA1DF6000E57B33 /* controladorTipoMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controladorTipoMasa.swift; sourceTree = "<group>"; };
+		4E6317231DA1E8B600E57B33 /* controladorTipoQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controladorTipoQueso.swift; sourceTree = "<group>"; };
+		4E6317251DA1ED4A00E57B33 /* controladorIngredientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controladorIngredientes.swift; sourceTree = "<group>"; };
+		4E6317271DA1EF7500E57B33 /* controladorConfirmacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = controladorConfirmacion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +160,11 @@
 				4E63170D1DA1CF0C00E57B33 /* ExtensionDelegate.swift */,
 				4E63170F1DA1CF0C00E57B33 /* Assets.xcassets */,
 				4E6317111DA1CF0C00E57B33 /* Info.plist */,
+				4E63171F1DA1DB1900E57B33 /* Datos.swift */,
+				4E6317211DA1DF6000E57B33 /* controladorTipoMasa.swift */,
+				4E6317231DA1E8B600E57B33 /* controladorTipoQueso.swift */,
+				4E6317251DA1ED4A00E57B33 /* controladorIngredientes.swift */,
+				4E6317271DA1EF7500E57B33 /* controladorConfirmacion.swift */,
 			);
 			path = "PizzaAppleWatch WatchKit Extension";
 			sourceTree = "<group>";
@@ -295,8 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6317281DA1EF7500E57B33 /* controladorConfirmacion.swift in Sources */,
 				4E63170E1DA1CF0C00E57B33 /* ExtensionDelegate.swift in Sources */,
+				4E6317221DA1DF6000E57B33 /* controladorTipoMasa.swift in Sources */,
+				4E6317261DA1ED4A00E57B33 /* controladorIngredientes.swift in Sources */,
+				4E6317241DA1E8B600E57B33 /* controladorTipoQueso.swift in Sources */,
 				4E63170C1DA1CF0C00E57B33 /* InterfaceController.swift in Sources */,
+				4E6317201DA1DB1900E57B33 /* Datos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,10 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var tamanoPizza: WKInterfaceLabel!
+    var datosPizza = Datos (t:"",m:"",q:"",i:"")
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -28,4 +32,23 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func sliderTamano(value: Float) {
+        switch value {
+            case 1:
+                datosPizza.tamanoPizza = "chica"
+            case 2:
+                datosPizza.tamanoPizza = "mediana"
+            case 3:
+                datosPizza.tamanoPizza = "grande"
+            default:
+                datosPizza.tamanoPizza = "chica"
+        }
+        tamanoPizza.setText(datosPizza.tamanoPizza)
+    }
+    
+    @IBAction func sgtePasoMasa() {
+        pushControllerWithName("controladorTipoMasa", context: datosPizza)
+    }
+    
+    
 }

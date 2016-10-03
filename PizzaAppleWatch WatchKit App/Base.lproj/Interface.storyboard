@@ -1,15 +1,148 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--controladorTamanoPizza-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="controladorTamanoPizza" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PizzaAppleWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Tamano Pizza" id="6rE-iX-aTX"/>
+                        <label alignment="left" text="chica" id="KgD-lL-vMv"/>
+                        <slider width="1" alignment="left" maximum="3" steps="3" id="X7a-JW-DVH">
+                            <connections>
+                                <action selector="sliderTamano:" destination="AgC-eL-Hgc" id="ClF-Cg-DJr"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente Paso" id="fuB-cv-jH4">
+                            <connections>
+                                <action selector="sgtePasoMasa" destination="AgC-eL-Hgc" id="cnR-Xl-9Ng"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="tamanoPizza" destination="KgD-lL-vMv" id="GaS-oO-NHK"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="304" y="92"/>
+        </scene>
+        <!--controladorTipoQueso-->
+        <scene sceneID="mLf-Ou-lod">
+            <objects>
+                <controller identifier="controladorTipoQueso" id="1LQ-8W-3hG" customClass="controladorTipoQueso" customModule="PizzaAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tipo de Queso" id="0iA-E4-fa6"/>
+                        <label alignment="left" text="mozarela" id="027-s2-OcU"/>
+                        <slider width="1" alignment="left" maximum="4" steps="4" id="jez-j0-qZA">
+                            <connections>
+                                <action selector="sliderTipoQueso:" destination="1LQ-8W-3hG" id="ngK-Sk-wHd"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente Paso" id="ihp-MB-8rK">
+                            <connections>
+                                <action selector="sgtePasoIngred" destination="1LQ-8W-3hG" id="yhw-1N-MXa"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="labelTipoQueso" destination="027-s2-OcU" id="KHc-gV-tyK"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="816" y="92"/>
+        </scene>
+        <!--controladorEnvioPedido-->
+        <scene sceneID="3It-jI-hpc">
+            <objects>
+                <controller identifier="controladorEnvioPedido" id="4cS-tX-XXw">
+                    <items>
+                        <label alignment="left" text="Tu pedido " id="clh-SO-EwO"/>
+                        <label alignment="left" text="fue confirmando" id="FFe-LO-jyN"/>
+                        <label alignment="left" text="y enviado" id="4DM-eJ-6qe"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="571" y="390"/>
+        </scene>
+        <!--controladorIngredientes-->
+        <scene sceneID="yBm-Aj-jQb">
+            <objects>
+                <controller identifier="controladorIngredientes" id="aEO-an-XHu" customClass="controladorIngredientes" customModule="PizzaAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Ingredientes" id="YJO-bg-y8i"/>
+                        <label alignment="left" text="jamon" id="ybQ-3g-hYB"/>
+                        <slider width="1" alignment="left" maximum="9" steps="9" id="8us-qA-XQZ">
+                            <connections>
+                                <action selector="sliderIngredientes:" destination="aEO-an-XHu" id="sbf-fa-7hw"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siguiente Paso" id="ooY-DQ-tNy">
+                            <connections>
+                                <action selector="sgtePasoConfirmacion" destination="aEO-an-XHu" id="Izo-7w-y8n"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="labelIngredientes" destination="ybQ-3g-hYB" id="scK-4K-ZCQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1056" y="92"/>
+        </scene>
+        <!--controladorConfirmacion-->
+        <scene sceneID="3XY-1f-dOY">
+            <objects>
+                <controller identifier="controladorConfirmacion" id="bdB-52-LDw" customClass="controladorConfirmacion" customModule="PizzaAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tu pedido es " id="8i0-aM-jzm"/>
+                        <label alignment="left" text="tamanoPizza" id="sOh-40-RQu"/>
+                        <label alignment="left" text="tipoMasa" id="0ZC-Wi-qZU"/>
+                        <label alignment="left" text="tipoQueso" id="NAq-Gn-Q3Z"/>
+                        <label alignment="left" text="Ingredientes" id="4EF-ON-FXm"/>
+                        <button width="1" alignment="left" title="Confirmas" id="pxx-fI-5I4">
+                            <connections>
+                                <action selector="confirmacionPedido" destination="bdB-52-LDw" id="lmC-QW-h93"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="labelIngredientes" destination="4EF-ON-FXm" id="waA-jG-71Z"/>
+                        <outlet property="labelTamanoPizza" destination="sOh-40-RQu" id="j0U-aX-Ejj"/>
+                        <outlet property="labelTipoMasa" destination="0ZC-Wi-qZU" id="HnT-lV-0Fn"/>
+                        <outlet property="labelTipoQueso" destination="NAq-Gn-Q3Z" id="s5h-d8-tlR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="304" y="397"/>
+        </scene>
+        <!--controladorTipoMasa-->
+        <scene sceneID="PZK-cZ-V9O">
+            <objects>
+                <controller identifier="controladorTipoMasa" id="GHk-12-qEa" customClass="controladorTipoMasa" customModule="PizzaAppleWatch_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Tipo de Masa" id="132-WY-0nz"/>
+                        <label alignment="left" text="delgada" id="d4g-Nn-huj"/>
+                        <slider width="1" alignment="left" maximum="3" steps="3" id="O4O-UC-HGs">
+                            <connections>
+                                <action selector="sliderTipoMasa:" destination="GHk-12-qEa" id="vHk-8t-yKe"/>
+                            </connections>
+                        </slider>
+                        <button width="1" alignment="left" title="Siquiente Paso" id="8vl-zM-3ac">
+                            <connections>
+                                <action selector="sgtePasoQueso" destination="GHk-12-qEa" id="Yjk-FQ-fsz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="labelTipoMasa" destination="d4g-Nn-huj" id="zQB-2x-DyO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="564" y="92"/>
         </scene>
     </scenes>
 </document>
